@@ -5,12 +5,10 @@
    输入：视觉特征，存放于单独的小文件中<br>
    输出：train0.pkl，train1.pkl，test.pkl<br>
    说明：由于内存限制，将训练集的视觉特征存放在两个文件中<br>
-
 ### random_sample.py
    功能：分别在训练集和测试集视觉特征中采样10%，用于视觉特征聚类<br>
    输入：train0.pkl，train1.pkl，test.pkl<br>
    输出：train0_sample0.1.pkl，train1_sample0.1.pkl，test_sample0.1.pkl<br>
-
 ## feature_engineering
 ### kmeans.py
    功能：在10%的视觉特征上训练kmeans聚类算法，并对所有视觉特征进行聚类，聚类个数分别为100和500<br>
@@ -23,7 +21,7 @@
    输入：train_interaction.txt，test_interaction.txt<br>
 	 &emsp;&emsp;&emsp;kmeans100_result_train0.pkl，kmeans100_result_train1.pkl，kmeans100_result_test.pkl<br>
 	 &emsp;&emsp;&emsp;kmeans500_result_train0.pkl，kmeans500_result_train1.pkl，kmeans500_result_test.pkl<br>
-   输出：train_features.csv，test_features.csv
+   输出：train_features.csv，test_features.csv<br>
 ### user_photo_emb.py
    功能：使用deepwalk算法，计算user.emb和photo.emb<br>
    输入：train_interaction.txt，test_interaction.txt<br>
@@ -42,7 +40,6 @@
    输入：train_interaction.txt，test_interaction.txt<br>
          &emsp;&emsp;&emsp;train_face.txt，test_face.txt<br>
    输出：face35.pkl<br>
-
 ## model
 ### model1.py
    功能：模型1，按照时间序列将原始训练集分为训练集和验证集，训练集数据占原始训练集的80%，使用验证集的auc进行提前停止<br>
