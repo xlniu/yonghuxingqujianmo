@@ -1,0 +1,2 @@
+deepwalk --input ./data/user.adjlist  --output ./data/user.emb --representation-size 64 --workers 32 --number-walks 20
+deepwalk --input ./data/photo.adjlist  --output ./data/photo.emb --representation-size 64 --workers 32 --number-walks 20
